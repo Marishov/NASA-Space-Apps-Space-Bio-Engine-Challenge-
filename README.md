@@ -1,46 +1,53 @@
-# NASA Space Biology Knowledge Engine
+NASA Space Biology Knowledge Engine
+NASA Space Apps Challenge 2025 Submission - Solo System Team
+An AI-powered research platform that transforms NASA's 608 bioscience publications into mission-critical insights for Artemis and Mars exploration programs.
 
-**!!!This README was made with the help of AI as I needed to distribute my time mainly on code; however, I reviewed, checked, and made corrections on its final version**
+📋 Overview
+The Space Biology Knowledge Engine addresses a critical challenge in space exploration: synthesizing decades of fragmented NASA bioscience research into an integrated, accessible knowledge base. By analyzing 608 publications spanning microgravity physiology, radiation biology, space agriculture, and cellular adaptation, this platform enables evidence-based decision-making for mission planning, research prioritization, and crew health protocols.
+Live Demo: https://drive.google.com/file/d/17eOt1QdUwB7Veo1R7z-EHZHO9BuUOPAZ/view?usp=sharing
+
+🎯 Core Capabilities
+AI-Powered Analysis
+
+Natural Language Processing: Query the corpus using plain English ("What are radiation risks for Mars?")
+Intelligent Summarization: Hugging Face BART Model synthesizes findings across multiple publications
+Context-Aware Responses: AI considers publication relevance, research consensus, and knowledge gaps
+
+Interactive Visualizations
+
+Dynamic Dashboard: 10+ real-time charts tracking publication trends, topic distribution, and organism coverage
+Knowledge Graph: A Visual network revealing interdisciplinary connections between research domains
+Gap Analysis Radar: Quantitative assessment of research completeness across critical areas
+
+Advanced Search & Filtering
+
+Multi-Dimensional Filters: Topic, organism, year, mission parameters
+Full-Text Search: Instantly locate publications by title, abstract, or keywords
+Smart Results: Publication cards with metadata, abstracts, and direct links to sources
+
+Extensible Data Architecture
+
+CSV Import: Upload additional datasets from NASA OSDR, GeneLab, PubMed
+URL Download: Fetch remote CSV files directly into the platform
+Live Counter: Publication count updates automatically as data expands
+
+Immersive Experience
+
+Mars Audio: Authentic Perseverance rover recordings provide ambient space environment
+Custom Branding: Solo System team logo integration
+Professional UI: Dark blue/yellow/white theme optimized for readability and focus
 
 
-**NASA Space Apps Challenge 2025 Submission**
+🛠️ Technology Stack
+Category: Technology Frontend Framework: React 18 with Hooks Data Visualization: Recharts, Custom SVG AI Integration: Hugging Face API (BART model)Data Processing Parse (CSV parsing) Styling: Tailwind CSS Icons: Lucide React Deployment: Vercel / Netlify
 
-An AI-powered interactive dashboard that transforms 608 NASA bioscience publications into actionable insights for scientists, mission planners, and space exploration stakeholders.
-
-
-## 📋 Overview
-
-The Space Biology Knowledge Engine addresses a critical challenge: making decades of NASA bioscience research accessible and actionable. With 608 publications spanning multiple research domains, our tool leverages AI and interactive visualizations to help users quickly identify research trends, knowledge gaps, and evidence-based insights.
-
-### 🎯 Key Features
-
-- **📊 Interactive Dashboard**: Real-time analytics with 10+ dynamic visualizations
-- **🔍 Advanced Search Engine**: Multi-filter publication explorer with instant results
-- **🤖 AI Research Assistant**: Natural language query system for intelligent insights
-- **🕸️ Knowledge Graph**: Visual network showing research relationships and connections
-- **📈 Gap Analysis**: Identifies under-researched areas requiring further investigation
-- **💡 Actionable Insights**: Synthesized findings for mission planning and research direction
-
-## 🛠️ Technology Stack
-
-- **Frontend**: React 18 with Hooks
-- **Visualizations**: Recharts (charts), Custom SVG (knowledge graph)
-- **Styling**: Tailwind CSS utilities
-- **Icons**: Lucide React
-- **Deployment**: [Vercel/Netlify/GitHub Pages]
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Node.js 14+ and npm
-- Git
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/YOUR-USERNAME/nasa-space-biology-engine.git
+🚀 Quick Start
+Prerequisites
+bashNode.js 14+ and npm
+Git
+Installation
+bash# Clone repository
+git clone https://github.com/Marishov/nasa-space-biology-engine.git
 cd nasa-space-biology-engine
 
 # Install dependencies
@@ -48,130 +55,191 @@ npm install
 
 # Start development server
 npm start
-```
+Application opens at http://localhost:3000
+Production Build
+bash npm run build
 
-The application will open at `http://localhost:3000`
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-## 📁 Project Structure
-
-```
-nasa-space-biology-engine/
+📁 Project Structure
+my-app/
 ├── public/
-│   ├── index.html
-│   └── favicon.ico
+│   ├── audio/
+│   │   └── mars-sound.wav      # Mars rover audio
+│   ├── data/
+│   │   └── SB_publication_PMC.csv  # NASA publications
+│   ├── logo.png                # Solo System logo
+│   └── index.html
 ├── src/
-│   ├── App.js              # Main application component
-│   ├── index.js            # Entry point
-│   └── index.css           # Global styles
-├── package.json            # Dependencies and scripts
-└── README.md              # This file
-```
+│   ├── App.js                  # Main application
+│   ├── index.js                # Entry point
+│   └── index.css               # Global styles
+├── package.json
+└── README.md
 
-## 🎨 Features Deep Dive
+🎨 Feature Specifications
+Dashboard Tab
 
-### Dashboard Tab
-- **Statistics Overview**: Total publications, research topics, missions, high-impact studies
-- **Publication Trends**: Time-series analysis of research output
-- **Topic Distribution**: Breakdown by research area (microgravity, radiation, plant biology, etc.)
-- **Organism Analysis**: Research distribution across model organisms
-- **Knowledge Gap Radar**: Visual representation of research completeness by area
+Publication Metrics: Total count (dynamically updated), high-impact studies, research topics
+Temporal Analysis: Time-series visualization of publication output (2010-2024)
+Topic Distribution: Bar chart showing research concentration across 12+ categories
+Organism Coverage: Pie chart displaying model organism usage (Human, Mouse, Arabidopsis, etc.)
+Gap Analysis Radar: Six-axis visualization quantifying research completeness:
 
-### Explore Tab
-- **Smart Search**: Full-text search across titles, abstracts, and keywords
-- **Advanced Filters**: By topic, organism, year, and mission
-- **Rich Results**: Publication cards with metadata, abstracts, and quick actions
-- **Export Capability**: Download filtered results for offline analysis
-
-### AI Insights Tab
-- **Natural Language Queries**: Ask questions about the research corpus
-- **Intelligent Summaries**: Synthesized findings across multiple publications
-- **Quick Insights**: Pre-configured queries for common research questions
-- **Priority Analysis**: Highlights critical research gaps requiring attention
-
-### Knowledge Graph Tab
-- **Interactive Visualization**: Network diagram of research relationships
-- **Connection Analysis**: Identifies cross-disciplinary links
-- **Emerging Trends**: Highlights new research connections
-- **Topic Clustering**: Visual grouping of related research areas
-
-## 📊 Data Source
-
-This application processes **608 NASA bioscience publications** from the NASA Biological and Physical Sciences Division. The publications cover:
-
-- Human spaceflight physiology
-- Plant growth in microgravity
-- Radiation biology
-- Cellular and molecular responses
-- Countermeasure development
-- Life support systems
-
-## 🎯 Target Audiences
-
-### Scientists & Researchers
-- Generate new hypotheses based on existing research
-- Identify gaps in current knowledge
-- Find relevant prior work quickly
-
-### Mission Planners & Architects
-- Access evidence-based insights for Moon and Mars missions
-- Understand biological risks and countermeasures
-- Make informed decisions about crew health protocols
-
-### Program Managers
-- Identify investment opportunities
-- Track research progress over time
-- Assess research portfolio coverage
-
-## 🔮 Future Enhancements
-
-- [ ] Integration with NASA OSDR for primary data access
-- [ ] Real-time AI using OpenAI/Claude API
-- [ ] PDF text extraction and processing
-- [ ] Citation network analysis
-- [ ] Collaborative annotation features
-- [ ] Export to various formats (CSV, PDF reports)
-- [ ] Multi-language support
-- [ ] Mobile app version
+Mars Gravity Effects: 35%
+Long-Duration Missions: 45%
+Combined Stressors: 50%
+Countermeasure Efficacy: 70%
+Genetic Factors: 55%
+Multi-generational: 20%
 
 
-### Challenge Goals Addressed
 
-✅ Summarizes 608 NASA bioscience publications  
-✅ Enables interactive exploration of research impacts  
-✅ Identifies knowledge gaps and research priorities  
-✅ Provides actionable insights for mission planning  
-✅ Leverages AI and knowledge graphs  
-✅ Creates accessible, user-friendly interface  
+Explore Tab
 
-## 👥 Team
+Real-Time Search: Instant filtering across 608+ publications
+Multi-Axis Filters: Topic, organism, year, mission
+Rich Publication Cards:
 
-- **[Baitur Marishov]** - Full Stack Development, AI Integration, Data Visualization
+Full title and abstract
+Author information and publication year
+Topic and organism tags
+Direct link to original source (PubMed)
+Citation count and impact rating
 
-## 📄 License
 
-This project is developed for the NASA Space Apps Challenge 2025. The source code is available under the MIT License.
+Export Function: Download filtered results as CSV
 
-## 🙏 Acknowledgments
+AI Insights Tab
 
-- NASA Biological and Physical Sciences Division for the research data
-- NASA Space Apps Challenge organizers
-- Open source community for amazing tools and libraries
+Query Interface: Natural language input field with example prompts
+Pre-Configured Queries:
 
-## 📞 Contact
+Microgravity research summary
+Radiation biology findings
+Plant growth in space
+Research gaps and priorities
 
-For questions or collaboration opportunities:
-- GitHub: [@Marishov](https://github.com/Marishov)
-- Email: bajturmarisov2@gmail.com
 
----
+Smart Responses:
 
-**Made with 💜 for space exploration and scientific discovery**
+AI-generated summaries from Hugging Face BART
+Fallback to local pattern-based analysis if API unavailable
+Publication statistics and relevance metrics
 
-*Enabling humanity's journey to the Moon, Mars, and beyond through data-driven insights*
 
+Priority Analysis: Color-coded research gap indicators (Critical/Moderate/Well-Studied)
+
+Knowledge Graph Tab
+
+Visual Network: SVG-based interactive graph showing 8+ major research nodes
+Connection Strength: Line thickness indicates interdisciplinary research volume
+Topic Metrics:
+
+Most Connected Topics (top 5 by publication count)
+Cross-Disciplinary Links (Radiation ↔ DNA Damage, etc.)
+Emerging Connections (newer research areas with growth potential)
+
+
+
+Resources Tab
+
+External Links: Direct access to NASA OSDR, Space Life Sciences Library, Task Book
+Data Import Tools:
+
+CSV file upload interface
+URL-based CSV download
+Import statistics and confirmation
+
+
+About Section: Team information and project methodology
+
+
+📊 Dataset
+Source: NASA Biological and Physical Sciences Division
+Total Publications: 608 (expandable via import tools)
+Coverage Areas:
+
+Microgravity effects on human physiology
+Space radiation biology and DNA damage
+Plant growth and space agriculture
+Cellular and molecular adaptation mechanisms
+Bone and muscle health countermeasures
+Immune system function in spaceflight
+Gene expression and epigenetic changes
+Cardiovascular health in microgravity
+
+Data Format: CSV with columns: Title, Link, Abstract, Year, Topic, Organism, Mission
+
+🎯 Target Audiences
+Research Scientists
+
+Hypothesis Generation: Discover unexplored research questions through gap analysis
+Literature Review: Quickly identify relevant prior work across 608 publications
+Interdisciplinary Connections: Knowledge graph reveals cross-domain opportunities
+
+Mission Planners & Architects
+
+Evidence-Based Protocols: Access synthesized findings on crew health, nutrition, radiation protection
+Risk Assessment: Quantitative data on biological challenges for Moon/Mars missions
+Technology Requirements: Informed decisions on life support systems, medical equipment, countermeasure hardware
+
+Program Managers
+
+Investment Priorities: Gap analysis identifies under-researched critical areas
+Portfolio Assessment: Track research progress across topics and time periods
+ROI Justification: Evidence-based funding allocation for maximum mission impact
+
+
+🔮 Future Enhancements
+Planned Features:
+
+ NASA OSDR API integration for primary experimental data
+ Enhanced AI models (GPT-4, Claude) for deeper analysis
+ PDF parsing for direct document upload
+ Citation network visualization
+ Collaborative annotation and note-taking
+ Multi-format export (PDF reports, presentations)
+ Mobile-responsive design optimization
+ Multi-language support for international teams
+
+
+🏆 NASA Space Apps Challenge Alignment
+Challenge: Build a Space Biology Knowledge Engine
+Solution Achievements:
+
+✅ Summarizes 608 NASA bioscience publications with AI-powered analysis
+✅ Enables interactive exploration through dynamic visualizations and filters
+✅ Identifies knowledge gaps with quantitative completeness metrics
+✅ Provides actionable insights synthesized across multiple studies
+✅ Leverages cutting-edge AI (Hugging Face BART) and knowledge graphs
+✅ Creates an intuitive, accessible interface for diverse stakeholders
+✅ Supports extensibility through data import tools
+
+
+👥 Team
+Solo System Team
+Baitur Marishov - Full Stack Development, AI Integration, Data Visualization, UX Design
+
+📄 License
+This project was developed for the NASA Space Apps Challenge 2025.
+Source code available under the MIT License.
+
+🙏 Acknowledgments
+
+NASA Biological and Physical Sciences Division for publication dataset
+NASA Space Apps Challenge 2025 organizers
+Hugging Face for AI model infrastructure
+Open source community (React, Recharts, Tailwind CSS, Papa Parse)
+
+
+📞 Contact
+Collaboration & Questions:
+
+GitHub: @Marishov
+Email: bajturmarisov2@gmail.com
+Project Repository: nasa-space-biology-engine
+
+
+Enabling evidence-based space exploration through intelligent research synthesis
+Transforming decades of NASA bioscience research into mission-ready knowledge for humanity's journey to the Moon, Mars, and beyond.
+
+Note: This README was collaboratively developed with AI assistance to optimize documentation quality under time constraints. All content has been reviewed, verified, and approved by the development team.
